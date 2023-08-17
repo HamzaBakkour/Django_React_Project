@@ -41,7 +41,7 @@ jobs:
         with:
           host: ${{ secrets.POSTGRAM_API_EC2_IP }}
           username: ${{ secrets.POSTGRAM_API_EC2_USERNAME }}
-          key: ${{ secrets.POSTGRAM_API }}
+          key: ${{ secrets.POSTGRAM_API_SSH_KEY }}
           passphrase: ${{ secrets.POSTGRAM_API_PASSHPRASE }}
           script: |
             cd ~/.scripts
