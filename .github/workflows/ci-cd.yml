@@ -39,14 +39,17 @@ jobs:
       - name: Deploying Application on EC2
         uses: appleboy/ssh-action@master
         with:
-          host: "yes_host"
-          username: "yes_username"
-          key: "yes_key"
-          passphrase: "yes_passphrase"
+          host: ${{ secrets.POSTGRAM_API_EC2_IP }}
+          username: ${{ secrets.POSTGRAM_API_EC2_USERNAME }}
+          key: ${{ secrets.POSTGRAM_API_SSH_KEY }}
+          passphrase: ${{ secrets.POSTGRAM_API_PASSHPRASE }}
           script: |
             cd ~/.scripts
             ./docker-ec2-deploy.sh
-
+# "yes_host"
+# "yes_username"
+# "yes_key"
+# "yes_passphrase"
 # ${{ secrets.POSTGRAM_API_EC2_IP }}
 # ${{ secrets.POSTGRAM_API_EC2_USERNAME }}
 # ${{ secrets.POSTGRAM_API_SSH_KEY }}
