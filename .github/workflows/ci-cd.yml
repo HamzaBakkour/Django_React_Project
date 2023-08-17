@@ -35,14 +35,14 @@ jobs:
     if: ${{ github.event_name == 'push' }}
     needs: [build-test]
     runs-on: ubuntu-latest
-    steps:
-      - name: Deploying Application on EC2
-        uses: appleboy/ssh-action@master
+    # steps:
+      # - name: Deploying Application on EC2
+        # uses: appleboy/ssh-action@master
         # with:
-        #   host: ${{ secrets.POSTGRAM_API_EC2_IP }}
-        #   username: ${{ secrets.POSTGRAM_API_EC2_USERNAME }}
-        #   key: ${{ secrets.POSTGRAM_API_SSH_KEY }}
-        #   passphrase: ${{ secrets.POSTGRAM_API_PASSHPRASE }}
-          script: |
-            cd ~/.scripts
-            ./docker-ec2-deploy.sh
+          # host: ${{ secrets.POSTGRAM_API_EC2_IP }}
+          # username: ${{ secrets.POSTGRAM_API_EC2_USERNAME }}
+          # key: ${{ secrets.POSTGRAM_API_SSH_KEY }}
+          # passphrase: ${{ secrets.POSTGRAM_API_PASSHPRASE }}
+          # script: |
+            # cd ~/.scripts
+            # ./docker-ec2-deploy.sh
