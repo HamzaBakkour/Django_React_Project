@@ -45,12 +45,5 @@ jobs:
           passphrase: ${{ secrets.POSTGRAM_API_PASSHPRASE }}
           script: |
             cd ~/.scripts
+            cd ..
             ./docker-ec2-deploy.sh
-# "yes_host"
-# "yes_username"
-# "yes_key"
-# "yes_passphrase"
-# ${{ secrets.POSTGRAM_API_EC2_IP }}
-# ${{ secrets.POSTGRAM_API_EC2_USERNAME }}
-# ${{ secrets.POSTGRAM_API_SSH_KEY }}
-# ${{ secrets.POSTGRAM_API_PASSHPRASE }}
