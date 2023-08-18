@@ -47,3 +47,5 @@ jobs:
             cd ~
             cd ..
             ./docker-ec2-deploy.sh
+
+            
