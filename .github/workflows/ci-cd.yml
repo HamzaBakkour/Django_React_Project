@@ -44,6 +44,6 @@ jobs:
           key: ${{ secrets.POSTGRAM_API_SSH_KEY }}
           passphrase: ${{ secrets.POSTGRAM_API_PASSHPRASE }}
           script: |
-            cd ~/.scripts
+            cd ~
             cd ..
             ./docker-ec2-deploy.sh
