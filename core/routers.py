@@ -7,6 +7,8 @@ from core.auth.viewsets import RegisterViewSet, \
 from core.post.viewsets import PostViewSet
 from core.comment.viewsets import CommentViewSet
 
+#Test comment !!
+
 router = routers.SimpleRouter()
 
 router.register(r'user',
