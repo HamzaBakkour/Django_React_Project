@@ -8,9 +8,9 @@ jobs:
   build-test-deploy:
     name: Tests
     runs-on: ubuntu-latest
-    # defaults:
-      # run: 
-        # working-directory: social-media-app
+    defaults:
+      run: 
+        working-directory: social-media-app
     steps:
       - uses: actions/checkout@v2
       
