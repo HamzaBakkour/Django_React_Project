@@ -1,0 +1,38 @@
+name: Build and deploy frontend
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-test-deploy:
+    name: Tests
+    runs-on: ubuntu-latest
+    # defaults:
+      # run: 
+        # working-directory: social-media-app
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Injecting enviroment variables
+        run: echo "REACT_APP_URL=${{ secrets.API_URL }}" >> .env
+      
+      - name: Installing dependencies
+        run: yarn install
+      
+      - name: Running tests
+        run: yarn test
+      
+      - name: Building project
+        run: yarn build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1
+      
+      - name: Deploy to S3 bucket
+        run: aws s3 sync ./build/ s3://postgramrontend --delete
+
