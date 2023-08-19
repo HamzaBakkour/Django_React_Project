@@ -7,7 +7,7 @@ import { getAccessToken, getRefreshToken, getUser,}
 
 
 const axiosService = axios.create({
-    baseURL: "ec2-16-171-154-3.eu-north-1.compute.amazonaws.com",
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
         "Content-Type": "application/json",
     },
@@ -35,7 +35,7 @@ const refreshAuthLogic = async (failedRequest) => {
     return axios
         .post("/auth/refresh/",
                 { refresh: getRefreshToken(),},
-                { baseURL: "ec2-16-171-154-3.eu-north-1.compute.amazonaws.com",})
+                { baseURL: process.env.REACT_APP_API_URL,})
 
         .then((resp) => {
             const { access } = resp.data;
