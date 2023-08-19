@@ -7,7 +7,7 @@ import { getAccessToken, getRefreshToken, getUser,}
 
 
 const axiosService = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: "ec2-16-171-154-3.eu-north-1.compute.amazonaws.com",
     headers: {
         "Content-Type": "application/json",
     },
