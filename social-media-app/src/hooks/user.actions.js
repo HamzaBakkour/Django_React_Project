@@ -5,7 +5,7 @@ import axtiosService from "../helpers/axios";
 
 function useUserActions() {
     const navigate = useNavigate();
-    const baseURL = "ec2-16-171-154-3.eu-north-1.compute.amazonaws.com";
+    const baseURL = "ec2-16-171-154-3.eu-north-1.compute.amazonaws.com/api";
 
 
     return {
