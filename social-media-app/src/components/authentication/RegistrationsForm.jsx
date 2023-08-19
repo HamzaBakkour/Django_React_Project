@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { useUserActions } from "../../hooks/user.actions";
 
 function RegistrationForm(){
     const navigate = useNavigate();//Will help us navigate to the home
@@ -19,6 +19,8 @@ function RegistrationForm(){
         bio: "",
     });
     const [error, setError] = useState(null);
+    const userActions = useUserActions();
+
     const hadleSubmit = (event) => {
         //Blocking the default form submission behavior
         //that is, reloading the page.
@@ -40,18 +42,8 @@ function RegistrationForm(){
             bio: form.bio,
         };
 
-        axios.post("http://localhost:8000/api/auth/register/", data)
-        .then((res) => {
-            localStorage.setItem("auth", JSON.stringify({
-                access: res.data.access,
-                refresh: res.data.refresh,
-                user: res.data.user,
-            }));
-
-            navigate("/");
-        })
-        .catch((err) => {
-            if (err.message){
+        userActions.register(data).catch((err) => {
+            if (err.message) {
                 setError(err.request.response);
             }
         })
