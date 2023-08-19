@@ -14,7 +14,7 @@ function useUserActions() {
         logout,
         edit
     };
- 
+  
     // Login the user
     function login(data) {
             return axios.post(`${baseURL}/auth/login/`, data).then((res) => {
