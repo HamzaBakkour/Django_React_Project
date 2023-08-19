@@ -11,7 +11,7 @@ function Login() {
                 <div className = "col-md-6 d-flex align-items-center">
                     <div className = "content text-center px-4">
                         <h1 className = "text-primary">
-                            Welcom to Postagram!
+                            Welcom to Postagram! TEST
                         </h1>
                         <p className = "content">
                             Login now and start enjoying! <br />
