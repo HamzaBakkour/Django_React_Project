@@ -6,14 +6,18 @@ import {
   getUser,
 } from "../hooks/user.actions";
 
+const base = "ec2-16-170-201-40.eu-north-1.compute.amazonaws.com";
+
 const axiosService = axios.create({
-  baseURL: "ec2-16-170-201-40.eu-north-1.compute.amazonaws.com",
+  baseURL: base,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
 console.log("axiosService: ", axiosService);
+console.log("baseURL: ", base);
+
 
 axiosService.interceptors.request.use(async (config) => {
   /**
@@ -36,7 +40,7 @@ const refreshAuthLogic = async (failedRequest) => {
         refresh: getRefreshToken(),
       },
       {
-        baseURL: "ec2-16-170-201-40.eu-north-1.compute.amazonaws.com",
+        baseURL: base,
       }
     )
     .then((resp) => {

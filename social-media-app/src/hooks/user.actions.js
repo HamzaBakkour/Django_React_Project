@@ -13,8 +13,10 @@ function useUserActions() {
     edit,
   };
 
+
   // Login the user
   function login(data) {
+    console.log("login, baseURL: ", baseURL);
     return axios.post(`${baseURL}/auth/login/`, data).then((res) => {
       // Registering the account and tokens in the store
       setUserData(res.data);
