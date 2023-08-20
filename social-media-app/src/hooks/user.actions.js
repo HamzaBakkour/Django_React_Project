@@ -5,7 +5,7 @@ import axtiosService from "../helpers/axios";
 
 function useUserActions() {
     const navigate = useNavigate();
-    const baseURL = process.env.REACT_APP_API_URL;
+    const baseURL = "ec2-16-170-201-40.eu-north-1.compute.amazonaws.com";
 
 
     return {
@@ -14,7 +14,7 @@ function useUserActions() {
         logout,
         edit
     };
-   
+
     // Login the user
     function login(data) {
             return axios.post(`${baseURL}/auth/login/`, data).then((res) => {
