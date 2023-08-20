@@ -3,3 +3,6 @@ chapter1_venv
 venv
 env
 .env
+/node_modules
+/.pnp
+.pnp.js
