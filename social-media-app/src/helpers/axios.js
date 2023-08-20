@@ -13,6 +13,8 @@ const axiosService = axios.create({
   },
 });
 
+console.log("axiosService: ", axiosService);
+
 axiosService.interceptors.request.use(async (config) => {
   /**
    * Retrieving the access and refresh tokens from the local storage
