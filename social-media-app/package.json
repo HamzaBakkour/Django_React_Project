@@ -46,7 +46,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ] 
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
