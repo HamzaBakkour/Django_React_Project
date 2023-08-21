@@ -11,11 +11,8 @@ module.exports = {
         test: /\.(js|jsx)$/,  
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-          options: ['es2015']
+          loader: "babel-loader"
         },
-
-
       },
       {
         test: /\.css$/i,
