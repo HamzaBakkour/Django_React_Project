@@ -3,15 +3,14 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 
-
 module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,  
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
         },
       },
       {
@@ -19,7 +18,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
     ],
-  }, 
+  },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
     extensions: ["", ".js", ".jsx"],
