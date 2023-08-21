@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\alexa\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D @babel/core babel-loader @babel/preset-env @
+  C:\Program Files\nodejs\node.exe C:\Users\alexa\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add mabel-preset-es2015
 
 PATH: 
   D:\PostgreSQL\bin;C:\Users\alexa\AppData\Local\Programs\Python\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft Network Monitor 3\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Common Files\Rockwell\;C:\Program Files (x86)\Rockwell Software\RSCommon;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;c:\page;C:\Users\alexa\AppData\Local\Programs\Python\Python36-32\Scripts;C:\Users\alexa\AppData\Roaming\Python\Python310\Scripts;C:\Users\alexa\AppData\Local\Programs\Python\Python310\Lib\site-packages;C:\Users\alexa\AppData\Local\Programs\Python\Python310\Scripts;C:\Program Files (x86)\dotnet\;C:\msys64\mingw64\share;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\alexa\AppData\Roaming\npm;C:\Program Files\PuTTY\;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\alexa\AppData\Local\Microsoft\WindowsApps;C:\Users\alexa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\alexa\AppData\Local\GitHubDesktop\bin;C:\Users\alexa\AppData\Roaming\npm;
@@ -14,8 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@: Request "https://registry.yarnpkg.com/@" returned a 405
-      at params.callback [as _callback] (C:\Users\alexa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66154:18)
+  Error: https://registry.yarnpkg.com/mabel-preset-es2015: Not found
+      at params.callback [as _callback] (C:\Users\alexa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
       at self.callback (C:\Users\alexa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
       at Request.emit (node:events:513:28)
       at Request.<anonymous> (C:\Users\alexa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
@@ -58,6 +58,7 @@ npm manifest:
       "build": "webpack --mode production",
       "test": "react-scripts test",
       "eject": "react-scripts eject"
+      
     },
     "eslintConfig": {
       "extends": [
@@ -75,19 +76,19 @@ npm manifest:
         "last 1 chrome version",
         "last 1 firefox version",
         "last 1 safari version"
-      ]
+      ] 
     },
     "devDependencies": {
-      "@babel/core": "^7.19.6",
-      "@babel/preset-env": "^7.19.4",
-      "@babel/preset-react": "^7.18.6",
+      "@babel/core": "^7.22.10",
+      "@babel/preset-env": "^7.22.10",
+      "@babel/preset-react": "^7.22.5",
       "@faker-js/faker": "^7.4.0",
-      "babel-loader": "^9.1.0",
+      "babel-loader": "^9.1.3",
       "copy-webpack-plugin": "^11.0.0",
       "css-loader": "^6.7.3",
       "dotenv-webpack": "^8.0.1",
       "html-loader": "^4.2.0",
-      "html-webpack-plugin": "^5.5.0",
+      "html-webpack-plugin": "^5.5.3",
       "jest-localstorage-mock": "^2.4.22",
       "react-test-renderer": "^18.2.0",
       "style-loader": "^3.3.1",
@@ -178,7 +179,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.22.9.tgz#71cdb00a1ce3a329ce4cbec3a44f9fef35669730"
     integrity sha512-5UamI7xkUcJ3i9qVDS+KFDEK8/7oJ55/sJMB1Ge7IEapr7KfdfV/HErR+koZwOfd+SgtFKOKRhRakdg++DcJpQ==
   
-  "@babel/core@^7.1.0", "@babel/core@^7.11.1", "@babel/core@^7.12.3", "@babel/core@^7.16.0", "@babel/core@^7.19.6", "@babel/core@^7.7.2", "@babel/core@^7.8.0":
+  "@babel/core@^7.1.0", "@babel/core@^7.11.1", "@babel/core@^7.12.3", "@babel/core@^7.16.0", "@babel/core@^7.22.10", "@babel/core@^7.7.2", "@babel/core@^7.8.0":
     version "7.22.10"
     resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.22.10.tgz#aad442c7bcd1582252cb4576747ace35bc122f35"
     integrity sha512-fTmqbbUBAwCcre6zPzNngvsI0aNrPZe77AeqvDxWM9Nm+04RrJ3CAmGHA9f7lJQY6ZMhRztNemy4uslDxTX4Qw==
@@ -1114,7 +1115,7 @@ Lockfile:
       "@babel/helper-create-regexp-features-plugin" "^7.22.5"
       "@babel/helper-plugin-utils" "^7.22.5"
   
-  "@babel/preset-env@^7.11.0", "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.16.4", "@babel/preset-env@^7.19.4":
+  "@babel/preset-env@^7.11.0", "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.16.4", "@babel/preset-env@^7.22.10":
     version "7.22.10"
     resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.22.10.tgz#3263b9fe2c8823d191d28e61eac60a79f9ce8a0f"
     integrity sha512-riHpLb1drNkpLlocmSyEg4oYJIQFeXAK/d7rI6mbD0XsvoTOOweXDmQPG/ErxsEhWk3rl3Q/3F6RFQlVFS8m0A==
@@ -1209,7 +1210,7 @@ Lockfile:
       "@babel/types" "^7.4.4"
       esutils "^2.0.2"
   
-  "@babel/preset-react@^7.12.5", "@babel/preset-react@^7.16.0", "@babel/preset-react@^7.18.6":
+  "@babel/preset-react@^7.12.5", "@babel/preset-react@^7.16.0", "@babel/preset-react@^7.22.5":
     version "7.22.5"
     resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.22.5.tgz#c4d6058fbf80bccad02dd8c313a9aaa67e3c3dd6"
     integrity sha512-M+Is3WikOpEJHgR385HbuCITPTaPRaNkibTEa9oiofmJvIsrceb4yp9RL9Kb+TE8LznmeyZqpP+Lopwcx59xPQ==
@@ -3057,7 +3058,7 @@ Lockfile:
       make-dir "^3.1.0"
       schema-utils "^2.6.5"
   
-  babel-loader@^9.1.0:
+  babel-loader@^9.1.3:
     version "9.1.3"
     resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-9.1.3.tgz#3d0e01b4e69760cc694ee306fe16d358aa1c6f9a"
     integrity sha512-xG3ST4DglodGf8qSwv0MdeWLhrDsw/32QMdTO5T1ZIp9gQur0HkCyFs7Awskr10JKXFXwpAhiCuYX5oGXnRGbw==
@@ -5368,7 +5369,7 @@ Lockfile:
       relateurl "^0.2.7"
       terser "^5.15.1"
   
-  html-webpack-plugin@^5.5.0:
+  html-webpack-plugin@^5.5.0, html-webpack-plugin@^5.5.3:
     version "5.5.3"
     resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.5.3.tgz#72270f4a78e222b5825b296e5e3e1328ad525a3e"
     integrity sha512-6YrDKTuqaP/TquFH7h4srYWsZx+x6k6+FbsTm0ziCwGHDP78Unr1r9F/H4+sGmMbX08GQcJ+K64x55b+7VM/jg==
