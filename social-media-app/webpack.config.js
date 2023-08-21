@@ -12,7 +12,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          presets: ['es2015']
+          options: ['es2015']
         },
 
 
