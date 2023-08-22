@@ -4,6 +4,17 @@ const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
+
+  devServer : {
+    contentBase: './dist',
+    compress: true,
+    port: 3002,
+    stats: 'errors-only',
+    open: true,
+    hot: true,
+},
+
+
   module: {
     rules: [
       {
